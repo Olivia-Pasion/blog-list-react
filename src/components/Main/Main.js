@@ -2,11 +2,11 @@ import BlogCard from '../BlogCard/BlogCard.js';
 import { useBlogs } from '../../hooks/useBlogs';
 
 export default function Main() {
-  const { filterBlogs } = useBlogs();
+  const { blogs } = useBlogs();
 
   return (
     <main>
-      {filterBlogs().map((blog) => (
+      {blogs.map((blog) => (
         <BlogCard key={blog.title} {...blog} />
       ))}
     </main>

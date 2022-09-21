@@ -13,10 +13,6 @@ export function useBlogs() {
     fetchData();
   }, []);
 
-  const filterBlogs = () => {
-    if (title === 'all') return blogs;
-    return blogs.filter((blog) => blog.title === title);
-  };
 
-  return { filterBlogs, title, setTitle };
+  return { blogs, title, setTitle };
 }
